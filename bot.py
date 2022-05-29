@@ -34,8 +34,8 @@ def menu(message):
         wind = data["wind"]["speed"] 
         today = datetime.today()
         global answer
-        answer = 'Сегодня, ' + (today.strftime("%d/%m/%Y")) +'\n'
-        answer += 'Temperatura Liepaja: ' + (str(cur_weather)) + ' Gradi.' + '\n' + 'Vēja ātrums:'+ (str(wind)) + ' m/s \n'
+        answer = 'Šodien, ' + (today.strftime("%d/%m/%Y")) +'\n'
+        answer += 'Temperatura Liepaja: ' + (str(cur_weather)) + ' gradi.' + '\n' + 'Vēja ātrums: '+ (str(wind)) + ' m/s \n'
         bot.send_message(message.chat.id, answer)
     elif message.text == '🔍 Kopigais informacija par pilsetu!':
         infolist ='Rajons: Kurzeme \n Pilsētas tiesības: 1625. gada \n Pilsetas platiba: 68 km(2) \n Iedzīvotāji: 67 964 \n Mājaslapa: https://www.liepaja.lv/'  
