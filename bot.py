@@ -22,7 +22,7 @@ def start(message):
     item4 = types.KeyboardButton("📰 Ziņas!")
     item5 = types.KeyboardButton("🗺 Pilsētas ceļvedis")
     markup.add(item1,item2,item3,item4, item5) 
-    bot.send_message(message.chat.id, "<b>{0. username}</b>, esiet sveicināts!\nEs esmu jūsu personīgais asistents Liepājā!\nKāda palīdzība jums ir nepieciešama? \nGatavs ar saūdošanu palīdzēt!". format(message.from_user, bot.get_me()),
+    bot.send_message(message.chat.id, "<b>{0.username}</b>,esiet sveicināts!\n es esmu jūsu personīgais asistents Liepājā!\nKāda palīdzība jums ir nepieciešama?\nGatavs ar saūdošanu palīdzēt!". format(message.from_user, bot.get_me()),
     reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
@@ -35,7 +35,7 @@ def menu(message):
         today = datetime.today()
         global answer
         answer = 'Šodien, ' + (today.strftime("%d/%m/%Y")) +'\n'
-        answer += 'Temperatura Liepaja: ' + (str(cur_weather)) + ' gradi.' + '\n' + 'Vēja ātrums: '+ (str(wind)) + ' m/s \n'
+        answer += 'Temperatura Liepaja: ' + (str(cur_weather)) + 'gradi.' + '\n' + 'Vēja ātrums: '+ (str(wind)) + ' m/s \n'
         bot.send_message(message.chat.id, answer)
     elif message.text == '🔍 Kopigais informacija par pilsetu!':
         infolist ='Rajons: Kurzeme \n Pilsētas tiesības: 1625. gada \n Pilsetas platiba: 68 km(2) \n Iedzīvotāji: 67 964 \n Mājaslapa: https://www.liepaja.lv/'  
