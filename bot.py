@@ -22,7 +22,7 @@ def start(message):
     item4 = types.KeyboardButton("📰 Ziņas!")
     item5 = types.KeyboardButton("🗺 Pilsētas ceļvedis")
     markup.add(item1,item2,item3,item4, item5) 
-    bot.send_message(message.chat.id, "<b>{0.username}</b>, добро пожаловать! \n Я - личный ваш асистен по Лиепае! \n Какая помошь требуеться? \n Готов с удоволствием помочь!". format(message.from_user, bot.get_me()),
+    bot.send_message(message.chat.id, "<b>{0. username}</b>, esiet sveicināts!\nEs esmu jūsu personīgais asistents Liepājā!\nKāda palīdzība jums ir nepieciešama? \nGatavs ar saūdošanu palīdzēt!". format(message.from_user, bot.get_me()),
     reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
@@ -68,7 +68,7 @@ def menu(message):
             item4 = types.KeyboardButton("📰 Ziņas!")
             item5 = types.KeyboardButton("🗺 Pilsētas ceļvedis")
             markup.add(item1,item2,item3,item4, item5)
-            bot.send_message(message.chat.id, 'Какая помощь требуеться' , reply_markup=markup) 
+            bot.send_message(message.chat.id, 'Kāda palīdzība nepieciešama' , reply_markup=markup) 
 # news
         if message.text =='Sports':
             url='https://www.liepajniekiem.lv/sports/'
