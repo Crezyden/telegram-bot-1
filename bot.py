@@ -1,4 +1,3 @@
-    
 from http import server
 import os
 from aiogram import types
@@ -324,5 +323,5 @@ def webhook():
     bot.remove_webhook(url='https://morning-cove-27367.herokuapp.com/'+ config.TOKEN)
     return "!", 200
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     server.run(host="0.0.0.0", post=int(os.environ.get('PORT',5000)))
