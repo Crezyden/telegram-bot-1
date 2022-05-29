@@ -312,16 +312,16 @@ def callback_inline(call):
                 # bot.send_message(call.message.chat.id, helpiss)
 # @bot.message_handler(content_types=['text'])
 #RUN
-# bot.polling(none_stop=True, interval=0) 
-@server.route('/'+config.TOKEN, methods=['POST'])
-def getMessage():
-    bot.process_new_updates([telebot.types.Update.de_json(requests.stream.read().decode("utf-8"))])
-    return "!", 200
+# @server.route('/'+config.TOKEN, methods=['POST'])
+# def getMessage():
+#     bot.process_new_updates([telebot.types.Update.de_json(requests.stream.read().decode("utf-8"))])
+#     return "!", 200
 
-@server.route("/")
-def webhook():
-    bot.remove_webhook(url='https://morning-cove-27367.herokuapp.com/'+ config.TOKEN)
-    return "!", 200
+# @server.route("/")
+# def webhook():
+#     bot.remove_webhook(url='https://morning-cove-27367.herokuapp.com/'+ config.TOKEN)
+#     return "!", 200
 
-if __name__ == "__main__":
-    server.run(host="0.0.0.0", post=int(os.environ.get('PORT',5000)))
+# if __name__ == "__main__":
+#     server.run(host="0.0.0.0", post=int(os.environ.get('PORT',5000)))
+bot.polling(none_stop=True, interval=0) 
